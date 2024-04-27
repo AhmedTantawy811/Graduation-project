@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GraduationProject"
+        tools:targetApi="31">
+        <activity
+            android:name=".Ui.home.healthyRecord.BloodPressureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.home.healthyRecord.HealthyRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.registration.forget_password.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.registration.forget_password.EditForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.registration.forget_password.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity android:name=".MyActivity" />
+        <activity
+            android:name=".Ui.home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.registration.userProfail.UserProfaile"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.registration.sing_up.Sing_up"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.registration.sing_in.Sing_in"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.onBoarding.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.splash.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ui.home.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

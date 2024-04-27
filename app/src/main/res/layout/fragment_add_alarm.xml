@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.home.fragment.alarm.AddAlarmFragment"
+    android:background="@color/white">
+
+  <TimePicker
+      android:id="@+id/timePicker"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:numbersTextColor="@color/black"
+      android:numbersBackgroundColor="@color/background"
+      android:numbersSelectorColor="@color/colorPrimary"
+      android:numbersInnerTextColor="@color/black"
+      android:background="@color/white"
+      />
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="195dp"
+      android:layout_marginTop="136dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/timePicker"
+      app:cardBackgroundColor="#F1EBFF"
+      android:padding="8dp"
+      android:elevation="2dp"
+      >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Appointment Name ........"
+        android:layout_marginTop="32dp"
+        android:textSize="32sp"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+       />
+<Button
+    android:id="@+id/cancel_butt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start|bottom"
+    android:backgroundTint="#F1EBFF"
+    android:text="Cancel"
+    android:textColor="@color/colorPrimary"
+    android:textSize="32sp"/>
+    <Button
+        android:id="@+id/save_butt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:backgroundTint="#F1EBFF"
+        android:text="Save"
+        android:textColor="@color/colorPrimary"
+        android:textSize="32sp"/>
+
+  </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
