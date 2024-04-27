@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navg"
+    app:startDestination="@id/homeActivity">
+
+    <fragment
+        android:id="@+id/homeActivity"
+        android:name="com.example.graduationproject.Ui.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" >
+        <action
+            android:id="@+id/action_homeActivity_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeActivity_to_alarmFragment"
+            app:destination="@id/alarmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmFragment"
+        android:name="com.example.graduationproject.Ui.home.fragment.alarm.AlarmFragment"
+        android:label="fragment_alarm"
+        tools:layout="@layout/fragment_alarm" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.graduationproject.Ui.home.fragment.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_passwordManagerFragment"
+            app:destination="@id/passwordManagerFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_userProfileEditFragment"
+            app:destination="@id/userProfileEditFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_logoutFragment"
+            app:destination="@id/logoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordManagerFragment"
+        android:name="com.example.graduationproject.Ui.home.fragment.settings.child_setting.PasswordManagerFragment"
+        android:label="fragment_password_manager"
+        tools:layout="@layout/fragment_password_manager" >
+        <action
+            android:id="@+id/action_passwordManagerFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/logoutFragment"
+        android:name="com.example.graduationproject.Ui.home.fragment.settings.child_setting.LogoutFragment"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/userProfileEditFragment"
+        android:name="com.example.graduationproject.Ui.home.fragment.settings.child_setting.UserProfileEditFragment"
+        android:label="fragment_user_profail_edit"
+        tools:layout="@layout/fragment_user_profail_edit" >
+        <action
+            android:id="@+id/action_userProfileEditFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+</navigation>

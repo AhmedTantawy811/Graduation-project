@@ -23,7 +23,7 @@ lateinit var addButton: ImageView
         return inflater.inflate(R.layout.fragment_alarm, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         addButton=view.findViewById(R.id.add_ic)
         addButton.setOnClickListener {
@@ -37,5 +37,5 @@ lateinit var addButton: ImageView
         .replace(R.id.childFragmentContainerAlarm, fragment)
         .addToBackStack(null)
         .commit()
-    }
+    }*/
 }

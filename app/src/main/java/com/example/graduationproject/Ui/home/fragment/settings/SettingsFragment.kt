@@ -53,7 +53,7 @@ class SettingsFragment : Fragment() {
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+   /* override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
                //Logout Scerean
@@ -87,6 +87,6 @@ class SettingsFragment : Fragment() {
         transaction.add(R.id.childFragmentContainer, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
-    }
+    }*/
 
 }

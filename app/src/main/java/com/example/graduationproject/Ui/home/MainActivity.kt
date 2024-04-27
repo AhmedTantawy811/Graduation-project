@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.graduationproject.R
 import com.example.graduationproject.Ui.home.fragment.alarm.AlarmFragment
 import com.example.graduationproject.Ui.home.fragment.settings.SettingsFragment
@@ -20,12 +22,14 @@ class MainActivity : AppCompatActivity(), BottomNavigationVisibilityListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        pushFragment(HomeActivity())
-        initViews()
-
+        //pushFragment(HomeActivity())
+       // initViews()
+        bottomNavigationView = findViewById(R.id.bottom_navigation)
+        val navController=findNavController(R.id.fragmentContainerView)
+        bottomNavigationView.setupWithNavController(navController)
     }
 
-    private fun initViews() {
+  /*  private fun initViews() {
      //   loadHomeScreen()
         //button home
         floatingButton=findViewById(R.id.floating_butt)
@@ -46,7 +50,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationVisibilityListener {
 
             return@setOnItemSelectedListener true
         }
-    }
+    }*/
 
     private fun pushFragment(fragment: Fragment) {
         supportFragmentManager
